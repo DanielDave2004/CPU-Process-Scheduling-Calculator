@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CPU Scheduling Calculator (FCFS or SJF)</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>CPU Scheduling Calculator</h1>
+
+<div class="container">
+    <label>Select Scheduling Algorithm:</label>
+    <select id="algorithm">
+        <option value="FCFS">First Come First Serve (FCFS)</option>
+        <option value="SJF">Shortest Job First (SJF)</option>
+    </select>
+
+    <label><br>Number of Processes:</label>
+    <input type="number" id="num" min="1" max="10" placeholder="Enter number of processes">
+
+    <button onclick="generateInputs()">Generate Input Fields</button>
+    <div id="inputs"></div>
+
+    <button onclick="calculate()">Calculate</button>
+
+    <div class="gantt-section" id="ganttContainer">
+        <h2 id="chartTitle"></h2>
+        <div id="ganttChart"></div>
+    </div>
+
+    <div id="output"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
